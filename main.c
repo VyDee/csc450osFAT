@@ -12,11 +12,10 @@ typedef struct Node{
 
 void push(Node* head, int startBlock, char* txtname)
 {
-    if(head == NULL)
+    if(head->next == NULL)
     {
         head->data = startBlock;
         head->name = txtname;
-        head->next =NULL;
     }
     else{
         Node* current = head;
@@ -73,6 +72,7 @@ int main() {
     head = (Node*) malloc(sizeof(head));
     head->next = NULL;
     push(head,start,textName);
+    
     printf("Print head->data is %d \n", getData(head));
     printf("Print head->name is %s \n", getName(head));
 
