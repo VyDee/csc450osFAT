@@ -17,7 +17,8 @@ void push(Node* head, int startBlock, char* txtname)
         head->data = startBlock;
         head->name = txtname;
     }
-    else{
+    else
+    {
         Node* current = head;
         while(current->next != NULL)
         {
